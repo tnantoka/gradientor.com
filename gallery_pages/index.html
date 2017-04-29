@@ -1,0 +1,64 @@
+---
+---
+<div class="album text-muted">
+  <div class="container">
+    <div class="row">
+      {% for post in paginator.posts %}
+        <div class="card">
+          <a href="#" data-toggle="modal" data-target="#download-modal-{{ post.title }}">
+            <img src="/assets/gallery/{{ post.title }}/thumbnail.png">
+          </a>
+          <p class="card-text">{{ post.content | strip_html }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% for post in paginator.posts %}
+  <div class="modal fade" id="download-modal-{{ post.title }}" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">{{ post.content | strip_html }}</h5>
+          <button type="button" class="close" data-dismiss="modal">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+          <img src="/assets/gallery/{{ post.title }}/thumbnail.png">
+        </div>
+        <div class="modal-footer">
+          <div class="dropup">
+            <button class="btn btn-primary" data-toggle="dropdown">
+              <i class="fa fa-fw fa-download"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-right">
+              <a class="dropdown-item" href="/assets/gallery/{{ post.title }}/facebook.png" target="_blank">
+                <i class="fa fa-fw fa-facebook-square"></i>
+                Facebook
+              </a>
+              <a class="dropdown-item" href="/assets/gallery/{{ post.title }}/twitter.png" target="_blank">
+                <i class="fa fa-fw fa-twitter-square"></i>
+                Twitter
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endfor %}
+
+<div class="container clearfix mt-5">
+  {% if paginator.next_page %}
+    <a href="#" data-href="{{ paginator.next_page_path }}" class="btn btn-outline-secondary float-right js-gallery-link">
+      <i class="fa fa-fw fa-chevron-right"></i>
+    </a>
+  {% endif %}
+  {% if paginator.previous_page %}
+    <a href="#" data-href="{{ paginator.previous_page_path }}" class="btn btn-outline-secondary js-gallery-link">
+      <i class="fa fa-fw fa-chevron-left"></i>
+    </a>
+  {% endif %}
+</div>

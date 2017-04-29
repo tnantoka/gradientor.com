@@ -1,0 +1,38 @@
+h1 a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+a {
+  outline: none !important;
+  color: #5065A0;
+}
+
+a:hover,
+a:active {
+  color: #394C82;
+}
+
+.btn-primary {
+  background: #5065A0;
+  border-color: #5065A0;
+}
+
+.btn-primary:hover,
+.btn-primary:active {
+  background: #394C82;
+}
+
+.modal img {
+  max-width: 100%;
+  height: auto;
+}
+
+.btn-outline-secondary i {
+  color: #ccc;
+}
+
+.btn-outline-secondary:hover i,
+.btn-outline-secondary:active i {
+  color: #fff;
+}
