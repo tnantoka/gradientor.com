@@ -13,7 +13,7 @@ locales:
 # Build settings
 markdown: kramdown
 
-paginate: 2
+paginate: 9
 paginate_path: "/gallery_pages/page:num/"
 
 gems:
