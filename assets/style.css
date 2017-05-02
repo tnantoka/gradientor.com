@@ -36,3 +36,11 @@ a:active {
 .btn-outline-secondary:active i {
   color: #fff;
 }
+
+.btn {
+  border-radius: 2px;
+}
+
+.carousel.slide {
+	border: 1px solid rgba(0, 0, 0, 0.12);
+}

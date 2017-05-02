@@ -1,11 +1,18 @@
 <section class="jumbotron text-center">
   <div class="container">
     <h1 class="jumbotron-heading">
-      <a href="/gallery/">{{ site.title }} Gallery</a>
+      <a href="/{% if page.locale == 'ja' %}ja/{% endif %}">{{ site.title }}</a>
+      <a href="/{% if page.locale == 'ja' %}ja/{% endif %}gallery/">Gallery</a>
     </h1>
     <p class="lead text-muted">{{ site.locales[page.locale].gallery_lead }}</p>
   </div>
 </section>
 
+<div class="mb-5">
+  {% include ad.html %}
+</div>
+
 <div class="js-gallery-container">
 </div>
+
+{% include ad.html %}
