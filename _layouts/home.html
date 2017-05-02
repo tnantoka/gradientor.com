@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+  <link rel="alternate" hreflang="en" href="{{ site.url }}/{% if page.title == 'Gallery' %}gallery/{% endif %}" />
+  <link rel="alternate" hreflang="ja" href="{{ site.url }}/ja/{% if page.title == 'Gallery' %}gallery/{% endif %}" />
+
   <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
