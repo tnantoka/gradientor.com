@@ -1,0 +1,6 @@
+# Redirect domain aliases to primary domain
+https://www.gradientor.com/* https://gradientor.tnantoka.com/:splat 301!
+https://gradientor.com/* https://gradientor.tnantoka.com/:splat 301!
+
+# Optional: Redirect default Netlify subdomain to primary domain
+https://gradientor.netlify.com/* https://gradientor.tnantoka.com/:splat 301!
